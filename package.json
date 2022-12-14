@@ -1,0 +1,70 @@
+{
+  "name": "poletop-finder",
+  "version": "1.1.7",
+  "description": "poletop-finder",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "webpack",
+    "prebuild": "yarn test && yarn roll-css",
+    "roll-css": "./node_modules/nyc-lib/css/roll-css.sh ./src/css/poletop-finder.theme.css ./src/css/poletop-finder.css",
+    "predeploy": "yarn build",
+    "deploy": "node deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CityOfNewYork/poletop-finder.git"
+  },
+  "author": "Chris Menedes, Tim Keane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CityOfNewYork/poletop-finder/issues"
+  },
+  "homepage": "https://github.com/CityOfNewYork/poletop-finder#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "nyc-lib": "^1.4.23",
+    "ol": "6.1.0",
+    "papaparse": "^5.3.0",
+    "proj4": "^2.4.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "coveralls": "^3.0.2",
+    "dotenv": "^8.2.0",
+    "ghooks": "^2.0.4",
+    "jest": "^24.8.0",
+    "jest-canvas-mock": "^2.2.0",
+    "jest-fetch-mock": "^2.1.2",
+    "nyc-build-helper": "^0.0.39",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "jest": {
+    "verbose": true,
+    "automock": false,
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ],
+    "setupFiles": [
+      "./__tests__/jest-setup.js"
+    ],
+    "transformIgnorePatterns": [],
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage/",
+    "collectCoverageFrom": [
+      "src/js/**/*.js"
+    ]
+  },
+  "resolutions": {
+    "**/**/yargs-parser": "^13.1.2",
+    "**/**/node-fetch": "^2.6.1",
+    "**/**/serialize-javascript": "^3.1.0",
+    "**/**/lodash": "^4.17.19",
+    "**/**/elliptic": "^6.5.3"
+  }
+}

@@ -1,0 +1,112 @@
+.fnd #banner {
+	background-image: url(../img/doitt-logo-solid.png);
+	background-size: 197px;
+	background-position: -35px -55px;
+	padding-left: 125px;
+}
+.fnd #home:focus svg {
+	transform: scale(0.34);
+	margin-left: -46.5px;
+}
+.facility ul {
+	margin: 0;
+}
+.facility li {
+	margin-left: -15px;
+}
+.facility ul li ul li {
+	font-size: 14px;
+}
+.fnd .facility button.btn.map {
+	width: calc(100% - 3px);
+}
+.no-flt #filters,
+.no-flt .btns h2:nth-of-type(3) {
+	display: none;
+}
+
+.chc-chc.status label[for=chc-chc-2]::before, .facility.installed .name::before {
+	background-image: url(../img/signal.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+}
+.chc-chc.status label[for=chc-chc-1]::before, .facility.approved .name::before {
+	background-image: url(../img/check_mark.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 16px;
+}
+.chc-chc.status label::before,.facility.installed .name::before, .facility.proposed .name::before, .facility.approved .name::before {
+	display: inline-block;
+	content: ' ';
+	width: 18px;
+	height: 18px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	background-color: rgba(46,107,164,.7);
+}
+.facility.installed .name::before, .facility.proposed .name::before, .facility.approved .name::before {
+	margin: 0 3px -4px -20px;
+}
+#filters label::before {
+	margin: 2px 5px -4px -24px;
+}
+.translated-rtl #filters label::before {
+	margin: 0px -6px -4px 8px;
+	float: initial;
+}
+.facility.installed .name, .facility.proposed .name, .facility.approved .name {
+	padding-left: 18px;
+}
+.chc-chc.status label {
+	padding-left: 21px;
+}
+.translated-rtl .chc-chc.status label {
+	padding-right: 7px;
+}
+.translated-rtl .chc-chc.status label::before,.translated-rtl .facility.proposed .name::before,.translated-rtl .facility.installed .name::before, .translated-rtl .facility.approved .name::before {
+	float: right;
+	margin: -1px -1px -4px 2px;
+}
+
+.translated-rtl .pop .facility.proposed .name::before,.translated-rtl .pop .facility.installed .name::before, .translated-rtl .pop .facility.approved .name::before {
+	float: right;
+	margin: -1px -2px -4px 2px;
+}
+.translated-rtl .pop>.content .name {
+	padding-right: unset;
+	padding-left: unset;
+}
+.community-board .pop .content {
+	width: 290px;
+}
+.tabs button.btn.active:focus, .tabs button.btn.active:focus * {
+	background-color: var(--focus-ring-color);
+	color: black;
+}
+.btn-sq:hover, .btn-rnd:hover {
+    background-color: #3094D8;
+    color: var(--color-light);
+}
+.fnd .splash .dia {
+	top: 35px;
+	overflow: auto;
+	border: 1px solid #fff;
+}
+.chc-chc input {
+	-webkit-appearance: none;
+}
+@media only screen and (max-width: 400px) {
+	.fnd .splash .dia {
+		width: calc(100% - 18px);
+		left: 0;
+	}
+}
+@media only screen and (max-height: 400px) {
+	.fnd .splash .dia {
+		width: calc(100% - 18px);
+		bottom: 0;
+		left: 0;
+	}
+}
